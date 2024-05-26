@@ -1,10 +1,10 @@
 import React from 'react';
-import { Button } from '@nextui-org/react';
+import User from '@/components/user';
 
 const Page = () => {
 	return (
 		<div>
-			<Button>Click me!!!</Button>
+			<User />
 		</div>
 	);
 };
