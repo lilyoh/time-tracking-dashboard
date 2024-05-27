@@ -1,4 +1,6 @@
-export async function getTimeFrames(): Promise<CardInformation[]> {
+import categoryInformation from './data.json';
+
+export async function getTimeFramesByHttp(): Promise<CardInformation[]> {
 	const res = await fetch('http://localhost:8000/data');
 
 	if (!res.ok) {
@@ -6,6 +8,10 @@ export async function getTimeFrames(): Promise<CardInformation[]> {
 	}
 
 	return res.json();
+}
+
+export function getTimeFrames(): Promise<CardInformation[]> {
+	return Promise.resolve(categoryInformation.data);
 }
 
 type TimeFrame = {
@@ -20,7 +26,6 @@ export type CardInformation = {
 		weekly: TimeFrame;
 		monthly: TimeFrame;
 	};
-	id: string;
 };
 
 export type TimeframeUnit = 'daily' | 'weekly' | 'monthly';
