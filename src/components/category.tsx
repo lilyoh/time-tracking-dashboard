@@ -10,7 +10,7 @@ type CategoryProps = {
 };
 
 const Category = ({ timeFrame, currentUnit }: CategoryProps) => {
-	const { title, timeframes, id } = timeFrame;
+	const { title, timeframes } = timeFrame;
 	console.log('currentUnit in category', currentUnit);
 
 	// navbar 클릭한 '단위'를 가져와서 (알아서)
