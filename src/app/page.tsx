@@ -12,7 +12,7 @@ const Page = async () => {
 	// Page
 
 	return (
-		<div className="bg-very-dark-blue flex items-start justify-center py-20 h-dvh">
+		<div className="bg-very-dark-blue flex items-start justify-center py-20 sm:h-dvh">
 			<DashboardContents timeFrames={timeFrames} />
 		</div>
 	);
