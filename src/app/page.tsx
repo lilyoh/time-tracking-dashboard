@@ -1,7 +1,7 @@
 import React from 'react';
 import User from '@/components/user';
 import { getTimeFrames } from '@/libs/get-time-frames';
-import { NavbarAndCategory } from '@/components/navbar-and-category';
+import { DashboardContents } from '@/components/dashboard-contents';
 
 const Page = async () => {
 	const timeFrames = await getTimeFrames();
@@ -12,11 +12,8 @@ const Page = async () => {
 	// Page
 
 	return (
-		<div className="bg-very-dark-blue flex items-start justify-center py-20">
-			<div>
-				<User />
-				<NavbarAndCategory timeFrames={timeFrames} />
-			</div>
+		<div className="bg-very-dark-blue flex items-start justify-center py-20 h-dvh">
+			<DashboardContents timeFrames={timeFrames} />
 		</div>
 	);
 };

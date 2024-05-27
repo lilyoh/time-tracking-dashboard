@@ -26,7 +26,7 @@ const Category = ({ timeFrame, currentUnit }: CategoryProps) => {
 	// current unit
 
 	return (
-		<div>
+		<div className="w-[300px]">
 			<Card
 				className={`bg-work bg-play bg-study bg-exercise bg-social bg-self-care flex items-end justify-center pr-4 pb-4 h-[100px] bg-${TITLE_CONVERT_TABLE[title]}`}
 			>
@@ -43,7 +43,7 @@ const Category = ({ timeFrame, currentUnit }: CategoryProps) => {
 					<div className="text-white font-bold">{title}</div>
 					<CategoryEllipsis />
 				</div>
-				<div className="flex justify-between items-center">
+				<div className="flex justify-between items-center sm:flex sm:flex-col sm:items-start sm:gap-2">
 					<div className="text-white text-3xl">{timeframes[currentUnit].current}hrs</div>
 					<div className="text-pale-blue">
 						Last {DISPLAYED_UNIT[currentUnit]} - {timeframes[currentUnit].previous}hrs

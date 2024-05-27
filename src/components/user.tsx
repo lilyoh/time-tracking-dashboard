@@ -3,7 +3,7 @@ import { Avatar, Card } from '@nextui-org/react';
 
 const User = () => {
 	return (
-		<Card className="bg-blue p-6 flex flex-row gap-4 items-center z-10">
+		<Card className="bg-blue p-6 flex flex-row gap-4 items-center z-10 ">
 			<Avatar
 				src="/images/image-jeremy.png"
 				className="border-2 border-white"
